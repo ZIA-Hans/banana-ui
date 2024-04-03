@@ -30,6 +30,8 @@ for (const component of componentNames) {
 try {
   fs.copyFileSync(`${typesDir}/index.d.ts`, `${distDir}/index.d.ts`);
   fs.copyFileSync(`${typesDir}/index.d.ts`, `${nodeDir}/index.d.ts`);
+  fs.copyFileSync(`${typesDir}/events.d.ts`, `${nodeDir}/events.d.ts`);
+  fs.copyFileSync(`${typesDir}/events.d.ts`, `${distDir}/events.d.ts`);
 } catch (error) {
   console.log('copy failed', error);
 }
